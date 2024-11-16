@@ -140,12 +140,16 @@
   <tbody><tr><td>
     <sectionheading>&nbsp;&nbsp;News</sectionheading>
     <ul>
-    <li>[09/2022] Join FCAV lab at UM <br></li>
+    <li>[05/2024] Join Ford/Latitude AI as an intern in perception team<br></li>
+    <li>[05/2024] LONER won RA-L 2023 <span style="color: red;">Best Paper Award!</span><br></li>
+    <li>[10/2024] One paper accepted by CVPR 2024 workshop<br></li>
+    <li>[10/2023] One paper accepted by RA-L 2023<br></li>
+    <li>[09/2022] Join Ford Center for Autonomous Vehicles (FCAV) lab at UM <br></li>
     <li>[03/2022] Join Taiwan (R.O.C) Marine Corps. Semper Fi! <br></li>
     <li>[01/2022] Join Self-Driving Car Team at Industrial Technology Research Institute (ITRI)<br></li>
     <li>[01/2022] My paper on radar occupancy prediction is accepted by RA-L'22.<br></li>
     <li>[09/2021] Receive The Phi Tau Phi Scholastic Honor.<br></li>
-    <li>[09/2021] Receive my M.Sc. degree at NYCU. Thanks to Bob Wang, Steve Lin, and all my colleagues in PAL.<br></li>
+    <!-- <li>[09/2021] Receive my M.Sc. degree at NYCU. Thanks to Bob Wang, Steve Lin, and all my colleagues in PAL.<br></li> -->
     <!--<li><b><FONT color=red>[01/2022] My paper on radar occupancy prediction is accepted by RA-L'22.</FONT></b> <br></li>
     <li>[02/2021] One paper on radar odometry/scan matching accepted by ICRA'21.<br></li>
     <li>[09/2019] Start my graduate study at NYCU (NCTU) advised by <a href="https://sites.google.com/site/chiehchihbobwang/home?authuser=0">Prof. Chieh-Chih (Bob) Wang</a>.<br></li>
@@ -174,6 +178,86 @@
   <!-- #################################### -->
   <tr>
     <td width="33%" valign="top" align="center">
+      <a href="https://openaccess.thecvf.com/content/CVPR2024W/NRI/papers/Kung_SAD-GS_Shape-aligned_Depth-supervised_Gaussian_Splatting_CVPRW_2024_paper.pdf"></a>
+      <img src="images/sad-gs.png" alt="sym" width="290" style="border-radius:10px">
+    </td>
+    <td width="67%" valign="top">
+      <p><a href="https://arxiv.org/abs/2112.04282" id="SADGS">
+      <heading>SAD-GS: Shape-aligned Depth-supervised Gaussian Splatting</heading></a><br>
+      <u><b>Pou-Chun Kung</b></u>, Seth Isaacson, Ram Vasudevan, and Katherine A. Skinner<br>
+      CVPR 2024 Workshop, Seattle
+      </p>
+
+      <div class="paper" id="sadgs">
+        <a href="javascript:toggleblock('sadgs_abs')">abstract</a> |
+        <a shape="rect" href="javascript:togglebib('sadgs')" class="togglebib">bibtex</a> |
+        <a href="https://openaccess.thecvf.com/content/CVPR2024W/NRI/papers/Kung_SAD-GS_Shape-aligned_Depth-supervised_Gaussian_Splatting_CVPRW_2024_paper.pdf">paper</a> |
+        <a href="https://umautobots.github.io/sad_gs">project page</a>
+        <p align="justify"> <i id="sadgs_abs" style="display: none;">This paper proposes SAD-GS, a depth-supervised Gaussian Splatting (GS) method that provides accurate 3D geometry reconstruction by introducing a shape-aligned depth supervision strategy. Depth information is widely used in various GS applications, such as dynamic scene reconstruction, real-time simultaneous localization and mapping, and few-shot reconstruction. However, existing depth-supervised methods for GS all focus on the center and neglect the shape of Gaussians during training. This oversight can result in inaccurate surface geometry in the reconstruction and can harm downstream tasks like novel view synthesis, mesh reconstruction, and robot path planning. 
+          To address this, this paper proposes a shape-aligned loss, which aims to produce a smooth and precise reconstruction by adding extra constraints to the Gaussian shape.
+          The proposed method is evaluated qualitatively and quantitatively on two publicly available datasets. 
+          The evaluation demonstrates that the proposed method provides state-of-the-art novel view rendering quality and mesh accuracy compared to existing depth-supervised GS methods..</i></p>
+        <pre xml:space="preserve" style="display: none;">@inproceedings{kung2024sad,
+          title={SAD-GS: Shape-aligned Depth-supervised Gaussian Splatting},
+          author={Kung, Pou-Chun and Isaacson, Seth and Vasudevan, Ram and Skinner, Katherine A},
+          booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+          pages={2842--2851},
+          year={2024}
+        }
+        </pre>
+      </div>
+    </td>
+  </tr>
+  <!-- #################################### -->
+  <tr>
+    <td width="33%" valign="top" align="center">
+      <a href="https://arxiv.org/pdf/2309.04937"></a>
+      <img src="images/loner.gif" alt="sym" width="295" height="170" style="border-radius:10px">
+    </td>
+    <td width="67%" valign="top">
+      <p><a href="https://arxiv.org/pdf/2309.04937" id="R2L">
+      <heading>LONER: LiDAR Only Neural Representations for Real-Time SLAM</heading></a><br>
+      Seth Isaacson*, <u><b>Pou-Chun Kung*</b></u>, Ram Vasudevan, and Katherine A. Skinner<br>
+      RA-L 2023, <strong><span style="color: red;">Best Paper Award!</span></strong> <br>
+      Presented in ICRA 2024 Yokohama
+      </p>
+
+      <div class="paper" id="r2l">
+        <a href="javascript:toggleblock('r2l_abs')">abstract</a> |
+        <a shape="rect" href="javascript:togglebib('r2l')" class="togglebib">bibtex</a> |
+        <a href="https://arxiv.org/pdf/2309.04937">arXiv</a> |
+        <a href="https://umautobots.github.io/loner">project page</a>
+        <p align="justify"> <i id="r2l_abs" style="display: none;">This paper proposes LONER, the first real-time
+          LiDAR SLAM algorithm that uses a neural implicit scene
+          representation. Existing implicit mapping methods for LiDAR
+          show promising results in large-scale reconstruction, but either
+          require groundtruth poses or run slower than real-time. In
+          contrast, LONER uses LiDAR data to train an MLP to estimate
+          a dense map in real-time, while simultaneously estimating the
+          trajectory of the sensor. To achieve real-time performance, this
+          paper proposes a novel information-theoretic loss function that
+          accounts for the fact that different regions of the map may
+          be learned to varying degrees throughout online training. The
+          proposed method is evaluated qualitatively and quantitatively on
+          two open-source datasets. This evaluation illustrates that the proposed loss function converges faster and leads to more accurate
+          geometry reconstruction than other loss functions used in depthsupervised neural implicit frameworks. Finally, this paper shows
+          that LONER estimates trajectories competitively with state-ofthe-art LiDAR SLAM methods, while also producing dense maps
+          competitive with existing real-time implicit mapping methods that
+          use groundtruth poses.</i></p>
+        <pre xml:space="preserve" style="display: none;">@article{isaacson2023loner,
+          title={Loner: Lidar only neural representations for real-time slam},
+          author={Isaacson, Seth and Kung, Pou-Chun and Ramanagopal, Mani and Vasudevan, Ram and Skinner, Katherine A},
+          journal={IEEE Robotics and Automation Letters},
+          year={2023},
+          publisher={IEEE}
+        }
+        </pre>
+      </div>
+    </td>
+  </tr>
+    <!-- #################################### -->
+  <tr>
+    <td width="33%" valign="top" align="center">
       <a href="https://arxiv.org/abs/2112.04282"></a>
       <img src="images/r2l.gif" alt="sym" width="295" height="170" style="border-radius:10px">
     </td>
@@ -182,7 +266,7 @@
       <heading>Radar Occupancy Prediction with Lidar Supervision while Preserving Long-Range Sensing and Penetrating Capabilities</heading></a><br>
       <u><b>Pou-Chun Kung</b></u>, Chieh-Chih Wang, Wen-Chieh Lin<br>
       <!--li>Under revision in RA-L 2022</li-->
-      RA-L 2022, <del>Philadelphia</del> Virtual
+      RA-L 2022, Philadelphia
       </p>
 
       <div class="paper" id="r2l">
@@ -205,12 +289,10 @@
     </td>
   </tr>
   <!-- #################################### -->
-  <tr>
+  <!-- <tr>
     <td width="33%" valign="top" align="center">
       <a href="#"></a>
       <img src="images/r2l_3d_comp.gif" alt="sym" width="300" height="240" style="border-radius:15px">
-      <!--<img src="images/r2l_3d_top_comp.gif" alt="sym" width="300" height="120" style="border-radius:15px">
-      <img src="images/r2l_3d_bottom_comp.gif" alt="sym" width="300" height="120" style="border-radius:15px">-->
     </td>
     <td width="67%" valign="top">
       <p><a id="R2L3D">
@@ -232,7 +314,7 @@
         </pre>
       </div>
     </td>
-  </tr>
+  </tr> -->
   <!-- #################################### -->
   <tr>
     <td width="33%" valign="top" align="center">
@@ -243,7 +325,7 @@
       <p><a href="https://arxiv.org/abs/2103.07908" id="RO">
       <heading>A Normal Distribution Transform-Based Radar Odometry Designed For Scanning and Automotive Radars</heading></a><br>
       <u><b>Pou-Chun Kung</b></u>, Chieh-Chih Wang, Wen-Chieh Lin<br>
-      ICRA 2021, <del>Xi'an</del> Virtual
+      ICRA 2021, Xi'an
       </p>
 
       <div class="paper" id="ro">
@@ -281,7 +363,34 @@
 <tr>
   <td width="33%" valign="top" align="center">
     <a href="#"></a>
-    <img src="images/radar_car_crop.jpg" align="center" alt="sym" width="170" height="180" style="border-radius:3px">
+    <img src="images/latitude.JPEG" align="center" alt="sym" width="200" style="border-radius:3px">
+  </td>
+  <td width="67%" valign="top">
+    <p><a id="LAT">
+    <heading> LiDAR-Supervised Gaussian Splatting Data Synthesis</heading></a><br>
+    Latitude AI <br>
+    Worked under Nikita Jaipuria </br>
+    </p>
+    <!-- <div class="paper" id="radar_sdc">
+      <a href="javascript:toggleblock('radar_sdc_abs')">abstract</a>
+      <p align="justify"> <i id="radar_sdc_abs" style="display: none;"> Setup sensors on the vehicle and collect data in crowded urban.<br>
+      Sensors:<br>
+      - Lucid Camera x4<br>
+      - Velodyne VLS-128 Lidar<br>
+      - Ouster OS1-128 Lidar<br>
+      - Baraja Lidar x2<br>
+      - Navtech CIR504-X Radar<br>
+      - Automotive Radar (Continental ARS 408-21) x2</i></p>
+      </div> -->
+  </td>
+</tr>
+
+<!-- #################################### -->
+
+<tr>
+  <td width="33%" valign="top" align="center">
+    <a href="#"></a>
+    <img src="images/radar_car_crop.jpg" align="center" alt="sym" width="200" style="border-radius:3px">
   </td>
   <td width="67%" valign="top">
     <p><a id="RADAR_SDC">
