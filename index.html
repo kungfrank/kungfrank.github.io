@@ -81,10 +81,10 @@
   <tbody><tr>
     <td width="32%" valign="top"><a href="images/frank.jpg"><img src="images/frank.jpg" width="100%" style="border-radius:15px"></a>
     <p align="center">
-    | 
-    <a href="files/CV_Pou_Chun_Kung_12_12.pdf">CV</a> |
+    <!-- |  -->
+    <!-- <a href="files/CV_Pou_Chun_Kung_12_12.pdf">CV</a> | -->
     <!-- <a href="https://scholar.google.com/citations?hl=en&amp;user=xE3WSuYAAAAJ">Google Scholar</a> |<br>| -->
-    <a href="https://github.com/kungfrank">Github</a> |
+    <!-- <a href="https://github.com/kungfrank">Github</a> | -->
     <!-- <a href="https://twitter.com/johnsonwang0810">Twitter</a> | -->
     </p>
     </td>
@@ -115,6 +115,10 @@
 <!-- =================== Experience =================== -->
 <table width="100%" align="center" style="margin-left:10px" cellspacing="0" cellpadding="0" border="0">
   <tbody><tr>
+    <th width="20%" valign="center" align="center">
+      <img src="images/Latitude.png" alt="sym" width="50%">
+      <p style="line-height:1.3; font-size:12pt">Latitude AI<br>Perception Team Intern<br>May. 24 - Now</p>
+    </th>
     <th width="20%" valign="center" align="center">
       <img src="images/UM.png" alt="sym" width="40%">
       <p style="line-height:1.3; font-size:12pt">U-M<br>PhD in Robotics<br>Sept. 22 - Now</p>
@@ -179,6 +183,36 @@
   <!-- #################################### -->
   <tr>
     <td width="33%" valign="top" align="center">
+      <a href="https://arxiv.org/abs/2412.15447"></a>
+      <img src="images/lihi-gs.png" alt="sym" width="350" style="border-radius:10px">
+    </td>
+    <td width="67%" valign="top">
+      <p><a href="https://arxiv.org/abs/2412.15447" id="SADGS">
+      <heading>LiHi-GS: LiDAR-Supervised Gaussian Splatting for Highway Driving Scene Reconstruction</heading></a><br>
+      <u><b>Pou-Chun Kung</b></u>, Xianling Zhang, Katherine A. Skinner, and Nikita Jaipuria<br>
+      Under Submission
+      </p>
+
+      <div class="paper" id="sadgs">
+        <a href="javascript:toggleblock('lihigs_abs')">abstract</a> |
+        <a shape="rect" href="javascript:togglebib('sadgs')" class="togglebib">bibtex</a> |
+        <a href="https://arxiv.org/abs/2412.15447">paper</a> |
+        <a href="https://umautobots.github.io/lihi_gs">project page</a>
+        <p align="justify"> <i id="lihigs_abs" style="display: none;">Photorealistic 3D scene reconstruction plays an important role in autonomous driving, enabling the generation of novel data from existing datasets to simulate safety-critical scenarios and expand training data without additional acquisition costs. Gaussian Splatting (GS) facilitates real-time, photorealistic rendering with an explicit 3D Gaussian representation of the scene, providing faster processing and more intuitive scene editing than the implicit Neural Radiance Fields (NeRFs). While extensive GS research has yielded promising advancements in autonomous driving applications, they overlook two critical aspects: First, existing methods mainly focus on low-speed and feature-rich urban scenes and ignore the fact that highway scenarios play a significant role in autonomous driving. Second, while LiDARs are commonplace in autonomous driving platforms, existing methods learn primarily from images and use LiDAR only for initial estimates or without precise sensor modeling, thus missing out on leveraging the rich depth information LiDAR offers and limiting the ability to synthesize LiDAR data. In this paper, we propose a novel GS method for dynamic scene synthesis and editing with improved scene reconstruction through LiDAR supervision and support for LiDAR rendering. Unlike prior works that are tested mostly on urban datasets, to the best of our knowledge, we are the first to focus on the more challenging and highly relevant highway scenes for autonomous driving, with sparse sensor views and monotone backgrounds. </i></p>
+        <pre xml:space="preserve" style="display: none;">@inproceedings{kung2024lihi,
+          title={LiHi-GS: LiDAR-Supervised Gaussian Splatting for Highway Driving Scene Reconstruction},
+          author={Kung, Pou-Chun and Zhang, Xianling and Skinner, Katherine A and Jaipuria, Nikita},
+          booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+          journal={arXiv preprint arXiv:2412.15447},
+          year={2024}
+        }
+        </pre>
+      </div>
+    </td>
+  </tr>
+  <!-- #################################### -->
+  <tr>
+    <td width="33%" valign="top" align="center">
       <a href="https://openaccess.thecvf.com/content/CVPR2024W/NRI/papers/Kung_SAD-GS_Shape-aligned_Depth-supervised_Gaussian_Splatting_CVPRW_2024_paper.pdf"></a>
       <img src="images/sad-gs.png" alt="sym" width="290" style="border-radius:10px">
     </td>
@@ -197,7 +231,7 @@
         <p align="justify"> <i id="sadgs_abs" style="display: none;">This paper proposes SAD-GS, a depth-supervised Gaussian Splatting (GS) method that provides accurate 3D geometry reconstruction by introducing a shape-aligned depth supervision strategy. Depth information is widely used in various GS applications, such as dynamic scene reconstruction, real-time simultaneous localization and mapping, and few-shot reconstruction. However, existing depth-supervised methods for GS all focus on the center and neglect the shape of Gaussians during training. This oversight can result in inaccurate surface geometry in the reconstruction and can harm downstream tasks like novel view synthesis, mesh reconstruction, and robot path planning. 
           To address this, this paper proposes a shape-aligned loss, which aims to produce a smooth and precise reconstruction by adding extra constraints to the Gaussian shape.
           The proposed method is evaluated qualitatively and quantitatively on two publicly available datasets. 
-          The evaluation demonstrates that the proposed method provides state-of-the-art novel view rendering quality and mesh accuracy compared to existing depth-supervised GS methods..</i></p>
+          The evaluation demonstrates that the proposed method provides state-of-the-art novel view rendering quality and mesh accuracy compared to existing depth-supervised GS methods.</i></p>
         <pre xml:space="preserve" style="display: none;">@inproceedings{kung2024sad,
           title={SAD-GS: Shape-aligned Depth-supervised Gaussian Splatting},
           author={Kung, Pou-Chun and Isaacson, Seth and Vasudevan, Ram and Skinner, Katherine A},
@@ -290,33 +324,6 @@
     </td>
   </tr>
   <!-- #################################### -->
-  <!-- <tr>
-    <td width="33%" valign="top" align="center">
-      <a href="#"></a>
-      <img src="images/r2l_3d_comp.gif" alt="sym" width="300" height="240" style="border-radius:15px">
-    </td>
-    <td width="67%" valign="top">
-      <p><a id="R2L3D">
-      <heading>Target 3D Shape Estimation from a Low-Cost 4D Radar Module</heading></a><br>
-      Chien-Cheng Fang, <u><b>Pou-Chun Kung</b></u>, Chieh-Chih Wang, Wen-Chieh Lin<br>
-      Under submission
-      </p>
-
-      <div class="paper" id="r2l3d">
-        <a href="javascript:toggleblock('r2l3d_abs')">abstract</a> |
-        <a href="https://youtu.be/d4kLRenhO_w">video</a>
-        <p align="justify"> <i id="r2l3d_abs" style="display: none;">Radar presents a promising alternative to LiDAR in autonomous driving applications by showing several advantages, such as the ability to work under diverse weather conditions, direct doppler velocity estimation, and relatively low price.
-        However, 4D radar outputs a 3D heatmap instead of a precise 3D shape of the surrounded environment. Moreover, the current state-of-the-art radar feature detection method, constant false alarm rate, only output sparse radar features.<br>
-
-        &nbsp;&nbsp;In this paper, we show the potential to convert radar into the 3D shape measurement sensor by demonstrating the preliminary results of particular targets.
-        We introduce the 3D-Unet model to the radar data and takes 3D shape measurements of LiDAR as the training ground truth.
-        However, since the low-cost 4D radar only provides timestamp at second resolution and do not provides time interval between two consecutive data, it is particularly challenging to synchronize radar and LiDAR data. As a result, we only collect static data, including few classes of target objects and human postures, in our experiment.
-        We demonstrate the preliminary experiment that estimates the 3D shape of particular targets from the radar module. The result shows the great potential of converting radar into the 3D shape measurement sensor if the data collection is more effective in the near future.</i></p>
-        </pre>
-      </div>
-    </td>
-  </tr> -->
-  <!-- #################################### -->
   <tr>
     <td width="33%" valign="top" align="center">
       <a href="https://arxiv.org/abs/2103.07908"></a>
@@ -385,9 +392,33 @@
       </div> -->
   </td>
 </tr>
-
 <!-- #################################### -->
+  <tr>
+    <td width="33%" valign="top" align="center">
+      <a href="#"></a>
+      <img src="images/r2l_3d_comp.gif" alt="sym" width="300" height="240" style="border-radius:15px">
+    </td>
+    <td width="67%" valign="top">
+      <p><a id="R2L3D">
+      <heading>Target 3D Shape Estimation from a Low-Cost 4D Radar Module</heading></a><br>
+      Chien-Cheng Fang, <u><b>Pou-Chun Kung</b></u>, Chieh-Chih Wang, Wen-Chieh Lin<br>
+      </p>
 
+      <div class="paper" id="r2l3d">
+        <a href="javascript:toggleblock('r2l3d_abs')">abstract</a> |
+        <a href="https://youtu.be/d4kLRenhO_w">video</a>
+        <p align="justify"> <i id="r2l3d_abs" style="display: none;">Radar presents a promising alternative to LiDAR in autonomous driving applications by showing several advantages, such as the ability to work under diverse weather conditions, direct doppler velocity estimation, and relatively low price.
+        However, 4D radar outputs a 3D heatmap instead of a precise 3D shape of the surrounded environment. Moreover, the current state-of-the-art radar feature detection method, constant false alarm rate, only output sparse radar features.<br>
+
+        &nbsp;&nbsp;In this paper, we show the potential to convert radar into the 3D shape measurement sensor by demonstrating the preliminary results of particular targets.
+        We introduce the 3D-Unet model to the radar data and takes 3D shape measurements of LiDAR as the training ground truth.
+        However, since the low-cost 4D radar only provides timestamp at second resolution and do not provides time interval between two consecutive data, it is particularly challenging to synchronize radar and LiDAR data. As a result, we only collect static data, including few classes of target objects and human postures, in our experiment.
+        We demonstrate the preliminary experiment that estimates the 3D shape of particular targets from the radar module. The result shows the great potential of converting radar into the 3D shape measurement sensor if the data collection is more effective in the near future.</i></p>
+        </pre>
+      </div>
+    </td>
+  </tr> 
+<!-- #################################### -->
 <tr>
   <td width="33%" valign="top" align="center">
     <a href="#"></a>
